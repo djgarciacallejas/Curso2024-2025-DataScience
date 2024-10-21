@@ -87,7 +87,7 @@ print("Individuals of Person or Animal:")
 for r in g.query(query):
     print(r.individual)
 
-"""**TASK 7.4:  List the name of the persons who know Rocky (in SPARQL only)**"""
+"""**TASK 7.4 :  List the name of the persons who know Rocky (in SPARQL only)**"""
 
 rocky = namespace.Rocky
 query = f"""
