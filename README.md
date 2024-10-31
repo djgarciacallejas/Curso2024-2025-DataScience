@@ -1,6 +1,7 @@
 Course 2024-2025-DataScience
 ============================
 
+
 This is the repository that we will use for our collaborative work and for uploading all the assignments for our course.
 
 This is the normal process that you will have to follow in order to interact with the repository:
@@ -30,6 +31,7 @@ This is the normal process that you will have to follow in order to interact wit
 
 **Assignment 1**. Please fill in a line with a dataset description at folder [Assignment 1](./Assignment1/DatasetDescriptions.csv), as discussed in the course moodle site, and make a pull request
 
+prueba
 **The following set of instructions will be updated as we progress during the course**
 
 **Assignment 2a - Exercise on RDF and RDFS**. Upload the RDF files corresponding to the exercise in the GitHub repository, and comment on those from your colleagues (if you wish), creating issues in the GitHub repository. This can be done in the [Assignment2](./Assignment2/) folder, **using your GitHub username - your NameSurname** + (.png/.svg) and (.rdf/.ttl), or any other similar file extension.
