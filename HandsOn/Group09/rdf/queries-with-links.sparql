@@ -1,0 +1,64 @@
+PREFIX base: <http://namespace.com#>
+PREFIX ns: <http://zonawifi.linkeddata.org#>
+PREFIX ns2: <http://instancias.org/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?wifi ?viawidata
+WHERE{
+    ?wifi a ns:EntidadWifi.
+    ?wifi ns:estarEnVia ?via.
+    ?via owl:sameAs ?viawidata.
+}
+
+SELECT ?wifi ?Barriowikidata
+WHERE{
+    ?wifi a ns:EntidadWifi
+    ?wifi ns:estarEnVia ?via.
+    ?via ns:estarEnBarrio ?Barrio.
+    ?wifi ns:estarEnBarrio ?Barrio.
+    ns:Barrio owl:sameAs ?Barriowikidata.
+}
+
+SELECT ?nombre ?viawidata
+WHERE{
+    ?wifi a ns:EntidadWifi.
+    ?wifi ns:tenerNombre ?nombre.
+    ?wifi ns:estarEnVia ?via.
+    ?via owl:sameAs ?viawidata.
+}
+
+SELECT ?wifi ?wikidataciudad
+WHERE{
+    ?wifi a ns:EntidadWifi
+    ?wifi ns:estarEnVia ?via.
+    ?via ns:estarEnBarrio ?Barrio.
+    ?Barrio ns:estarEnDistrito ?Distrito.
+    ?Distrito ns:estarEnCiudad ?Ciudad.
+    ?Ciudad owl:sameAs ?wikidataciudad
+}
+
+SELECT ?via ?wikidata 
+WHERE{
+    FILTER(STRSTARTS(STR(?via), "http://zonawifi.linkeddata.org#CALLE"))
+    ?wifi a ns:EntidadWifi
+    ?wifi ns:estarEnVia ?via.
+    ?via ns:estarEnBarrio ?Barrio.
+    ?Barrio ns:estarEnDistrito ?Distrito.
+    ?Distrito ns:estarEnCiudad ?Ciudad.
+    ?Ciudad ns:estarEnProvincia ?Provincia.
+    ?Provincia owl:sameAs ?Provinciawikidata.
+}
+
+
+SELECT ?tipoNum ?wikidata
+WHERE {
+  ?wifi a ns:EntidadWifi .
+  ?wifi ns:tipoNum ?tipoNum .
+  ?wifi ns:estarEnVia ?via.
+  ?via  ns:estarEnBarrio ?Barrio.
+  ?Barrio ns:estarEnDistrito ?Distrito.
+  ?Distrito ns:estarEnCiudad ?Ciudad.
+  ?distrito owl:sameAs ?estarEnDistrito .
+  FILTER(?tipoNum = "V")
+}

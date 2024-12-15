@@ -16,27 +16,16 @@
 			mod:createdWith <https://chowlk.linkeddata.es/> .
 
 
+
 ## ns:1940
 ns:1940 rdf:type owl:NamedIndividual;
 		rdf:type ns:EntidadWifi .
 
-## ns:445141
-ns:445141 rdf:type owl:NamedIndividual;
-		rdf:type ns:CoordendaX .
-
-## ns:4473033
-ns:4473033 rdf:type owl:NamedIndividual;
-		rdf:type ns:CoordenadaY .
-
-## ns:913287385
-ns:913287385 rdf:type owl:NamedIndividual;
-		rdf:type ns:Telefono .
-
-## ns:Metro_de_Madrid
-ns:Metro_de_Madrid rdf:type owl:NamedIndividual;
+## ns:Metro_de_Madrid_9
+ns:Metro_de_Madrid_9 rdf:type owl:NamedIndividual;
 		rdf:type ns:Trasporte .
 
-## ns:"Avenida_de_Moratalaz"
+## ns:Avenida_de_Moratalaz
 ns:"Avenida_de_Moratalaz" rdf:type owl:NamedIndividual;
 		rdf:type ns:Via .
 
@@ -56,47 +45,36 @@ ns:Madrid rdf:type owl:NamedIndividual;
 ns:Madrid rdf:type owl:NamedIndividual;
 		rdf:type ns:Provincia .
 
-## ns:CentrosCulturales
-ns:CentrosCulturales rdf:type owl:NamedIndividual;
-		rdf:type ns:TipoEntidadWifi .
+## ns:"https
+ns:"https rdf:type owl:NamedIndividual;
+		rdf:type ns:URLDeContenido .
 
-## ns: -3.646521482592748
-ns: -3.646521482592748 rdf:type owl:NamedIndividual;
-		rdf:type ns:Longitud .
-
-## ns:40.40610655994401
-ns:40.40610655994401 rdf:type owl:NamedIndividual;
-		rdf:type ns:Latitud .
-
-## ns:"Centro_Cultural_el_Torito"
-ns:"Centro_Cultural_el_Torito" rdf:type owl:NamedIndividual;
-		rdf:type ns:NombreEntidad .
-
-ns:1940 ns:tenerCoordenadaY ns:4473033 .
-ns:1940 ns:tenerCoordendaX ns:445141 .
-ns:1940 ns:tenerTelefono ns:913287385 .
 ns:1940 ns:estarEnVia ns:"Avenida_de_Moratalaz" .
-ns:1940 ns:tenerNombre ns:"Centro_Cultural_el_Torito" .
-ns:1940 ns:llegarConTransporte ns:Metro_de_Madrid .
-ns:1940 ns:serDeTipo ns:CentrosCulturales .
-ns:1940 ns:tenerLatitud ns:40.40610655994401 .
-ns:1940 ns:tenerLongitud ns: -3.646521482592748 .
+ns:1940 ns:tenerURL ns:"https .
+ns:1940 ns:llegarConTransporte ns:Metro_de_Madrid_9 .
 ns:1940 ns:accesibilidad "1"^^xsd:integer .
 ns:1940 ns:horario "De lunes a viernes de 9 a 13:30 y de 17 a 18:30 horas. Julio, de lunes a viernes de 9 a 13:30 horas.  Fuera de este horario el centro permanecerá abierto durante la celebración de las actividades que se programen."^^xsd:string .
 ns:1940 ns:equipamiento "Sala de lectura y estudio Salón de actos / auditorio (Aforo: 200 personas) Salas de ensayo 9 Aulas Zona wifi"^^xsd:string .
 ns:1940 ns:email "cceltorito@madrid.es"^^xsd:string .
-ns:1940 ns:urlDeConteido "http://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=f3073d0b5e71c010VgnVCM1000000b205a0aRCRD"^^xsd:string .
+ns:1940 ns:nombreEntidad "Centro_Cultural_el_Torito"^^xsd:string .
+ns:1940 ns:longitud "-3.646521482592748"^^xsd:float .
+ns:1940 ns:latitud "40.40610655994401"^^xsd:float .
+ns:1940 ns:tipoEntidadWifi "CentrosCulturales"^^xsd:string .
+ns:1940 ns:coordenadaX "4451441"^^xsd:float .
+ns:1940 ns:coordenadaY "4473033"^^xsd:float .
+ns:1940 ns:telefono "913 287 385"^^xsd:string .
 ns:1940 ns:estarEnVia "Avenida_de_Moratalaz" .
-ns:1940 ns:tenerNombre "Centro_Cultural_el_Torito" .
-ns:Metro_de_Madrid ns:linea "Artilleros (lí­nea 9)"^^xsd:string .
+ns:1940 ns:tenerURL "https://www.madrid.es/sites/v/index.jsp?vgnextchannel=bfa48ab43d6bb410VgnVCM100000171f5a0aRCRD&vgnextoid=f3073d0b5e71c010VgnVCM1000000b205a0aRCRD" .
+ns:Metro_de_Madrid_9 ns:linea "9"^^xsd:string .
+ns:Metro_de_Madrid_9 ns:compañia "Metro_de_Madrid"^^xsd:string .
 ns:"Avenida_de_Moratalaz" ns:estarEnBarrio ns:Vinateros .
 ns:"Avenida_de_Moratalaz" ns:numero "130"^^xsd:integer .
 ns:"Avenida_de_Moratalaz" ns:tipoNum "V"^^xsd:string .
 ns:"Avenida_de_Moratalaz" ns:codigoPostal "28030"^^xsd:string .
 ns:Vinateros ns:estarEnDistrito ns:Moratalaz .
-ns:Vinateros ns:codigoDeBarrio "6"^^xsd:intenger .
+ns:Vinateros ns:codigoDeBarrio "6"^^xsd:integer .
 ns:Moratalaz ns:estarEnCiudad ns:Madrid .
-ns:Moratalaz ns:codigoDeDistrito "14"^^xsd:intenger .
+ns:Moratalaz ns:codigoDeDistrito "14"^^xsd:integer .
 ns:Madrid ns:estarEnProvincia ns:Madrid .
 #################################
 #    General Axioms
