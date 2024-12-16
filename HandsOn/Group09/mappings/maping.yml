@@ -1,6 +1,6 @@
 prefixes:
-  base: http://zonawifi.linkeddata.org/
-  ns: http://zonawifi.linkeddata.org/
+  base: http://zonawifi.linkeddata.org/ontologia#
+  ns: http://zonawifi.linkeddata.org/ontologia#
   ns2: http://instancias.org/
   xsd: http://www.w3.org/2001/XMLSchema#
   
@@ -11,7 +11,7 @@ mappings:
     s: ns2:EntidadWifi/$(EntidadWifi)
     po:
       - [a,ns:EntidadWifi ]
-      - [ns:accesibilidad, $(ACCESIBILIDAD),xsd:string]
+      - [wifi:accesibilidad, $(ACCESIBILIDAD),xsd:string]
       - [ns:equipamiento,$(EQUIPAMIENTO),xsd:string]
       - [ns:horario,$(HORARIO),xsd:string]
       - [ns:email,$(EMAIL),xsd:string] 
@@ -37,7 +37,7 @@ mappings:
               - [ns:compania,$(TRANSPORTE_1), xsd:string]
 
   Transporte_2:
-        source:
+        sources:
               - [216619-0-wifi-municipal-updated.csv~csv]
         s: ns2:TRASNPORTE_2/$(TRANSPORTE_2)$(Linea_2)
         po:
@@ -45,7 +45,7 @@ mappings:
               - [a, ns:Transporte~iri]
               - [ns:compania,$(TRANSPORTE_2), xsd:string]
   Via:
-        source: 
+        sources: 
               - [216619-0-wifi-municipal-updated.csv~csv]
         s: ns2:VIA/$(VIA)$(NUM)
         po:
@@ -55,7 +55,7 @@ mappings:
               - [ns:codigoPostal, $(CODIGO-POSTAL), xsd:string]
               - [ns:estarEnBarrio, ns2:BARRIO/$(BARRIO)~iri]
   Barrio:
-        source:
+        sources:
               - [216619-0-wifi-municipal-updated.csv~csv]
         s: ns2:BARRIO/$(BARRIO)
         po:
@@ -63,7 +63,7 @@ mappings:
               - [ns:codigoBarrio, $(COD-BARRIO), xsd:string]
               - [ns:estarEnDistrito, ns2:DISTRITO/$(DISTRITO)~iri]
   Distrito:
-      source:
+      sources:
             - [216619-0-wifi-municipal-updated.csv~csv]
       s: ns2:DISTRITO/$(DISTRITO)
       po:
@@ -71,14 +71,14 @@ mappings:
             - [ns:codigoDistrito, $(COD-DISTRITO), xsd:string]
             - [ns:estarEnCiudad,ns2:CIUDAD/$(CIUDAD)~iri]
   Ciudad:
-      source:
+      sources:
             - [216619-0-wifi-municipal-updated.csv~csv]
       s: ns2:CIUDAD/$(CIUDAD)
       po:
             - [a, ns:Ciudad]
             - [ns:estarEnProvincia, ns2:PROVINCIA/$(PROVINCIA)~iri]            
   Provincia:
-      source:
+      sources:
             - [216619-0-wifi-municipal-updated.csv~csv]
       s: ns2:PROVINCIA/$(PROVINCIA)
       po:

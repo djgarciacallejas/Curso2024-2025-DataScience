@@ -1,6 +1,6 @@
 prefixes:
-  base: http://zonawifi.linkeddata.org/
-  ns: http://zonawifi.linkeddata.org/
+  base: http://zonawifi.linkeddata.org/ontologia#
+  ns: http://zonawifi.linkeddata.org/ontologia#
   ns2: http://instancias.org/
   xsd: http://www.w3.org/2001/XMLSchema#
   owl: http://www.w3.org/2002/07/owl#
@@ -37,7 +37,7 @@ mappings:
               - [a, ns:Transporte]
               - [ns:compania,$(TRANSPORTE_1),xsd:string]
   Transporte_2:
-        source:
+        sources:
             - [216619-0-wifi-municipal-with-links.csv~csv]
         s: ns2:TRANSPORTE_2/$(TRANSPORTE_2)$(Linea_2)
         po:
@@ -45,7 +45,7 @@ mappings:
               - [a, ns:Transporte]
               - [ns:compania, $(TRANSPORTE_2),xsd:string]
   Via:
-        source: 
+        sources: 
             - [216619-0-wifi-municipal-with-links.csv~csv]
         s: ns2:VIA/$(VIA)$(NUM)
         po:
@@ -57,7 +57,7 @@ mappings:
               - [owl:sameAs, $(same_as_wikidata_via)~iri]
 
   Barrio:
-        source:
+        sources:
             - [216619-0-wifi-municipal-with-links.csv~csv]
         s: ns2:BARRIO/$(BARRIO)
         po:
@@ -66,7 +66,7 @@ mappings:
               - [ns:estarEnDistrito, ns2:DISTRITO/$(DISTRITO)~iri]
               - [owl:sameAs, $(same_as_wikidata_barrio)~iri]
   Distrito:
-      source:
+      sources:
             - [216619-0-wifi-municipal-with-links.csv~csv]
       s: ns2:DISTRITO/$(DISTRITO)
       po:
@@ -75,7 +75,7 @@ mappings:
             - [ns:estarEnCiudad,  ns2:CIUDAD/$(CIUDAD)~iri]
             - [owl:sameAs, $(same_as_wikidata_distrito)~iri]
   Ciudad:
-      source:
+      sources:
             - [216619-0-wifi-municipal-with-links.csv~csv]
       s: ns2:CIUDAD/$(CIUDAD)
       po:
@@ -83,7 +83,7 @@ mappings:
             - [ns:estarEnProvincia, ns2:PROVINCIA/$(PROVINCIA))~iri]
             - [owl:sameAs, $(same_as_wikidata_ciudad)~iri ]            
   Provincia:
-      source:
+      sources:
             - [216619-0-wifi-municipal-with-links.csv~csv]
       s: ns2:PROVINCIA/$(PROVINCIA)
       po:

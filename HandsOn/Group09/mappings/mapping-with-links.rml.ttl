@@ -7,8 +7,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix base: <http://zonawifi.linkeddata.org/> .
-@prefix ns: <http://zonawifi.linkeddata.org/> .
+@prefix base: <http://zonawifi.linkeddata.org/ontologia#> .
+@prefix ns: <http://zonawifi.linkeddata.org/ontologia#> .
 @prefix ns2: <http://instancias.org/> .
 
 map:map_Barrio_000 rml:logicalSource map:source_004 ;

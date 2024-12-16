@@ -1,8 +1,7 @@
-PREFIX base: <http://namespace.com#>
-PREFIX ns: <http://zonawifi.linkeddata.org#>
+PREFIX base: <http://zonawifi.linkeddata.org/ontologia#>
+PREFIX ns: <http://zonawifi.linkeddata.org/ontologia#>
 PREFIX ns2: <http://instancias.org/> 
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
 
 SELECT ?EntidadWifi ?NombreEntidad ?Latitud ?Longitud ?Barrio ?Distrito ?Ciudad

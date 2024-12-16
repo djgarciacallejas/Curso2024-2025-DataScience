@@ -6,8 +6,8 @@
 @prefix map: <http://mapping.example.com/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix base: <http://zonawifi.linkeddata.org/> .
-@prefix ns: <http://zonawifi.linkeddata.org/> .
+@prefix base: <http://zonawifi.linkeddata.org/ontologia#> .
+@prefix ns: <http://zonawifi.linkeddata.org/ontologia#> .
 @prefix ns2: <http://instancias.org/> .
 
 map:map_Barrio_000 rml:logicalSource map:source_004 ;
@@ -227,7 +227,7 @@ map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_001 rdf:type rr:PredicateMap ;
-	rr:constant ns:accesibilidad .
+	rr:constant <wifi:accesibilidad> .
 
 map:pm_002 rdf:type rr:PredicateMap ;
 	rr:constant ns:equipamiento .
